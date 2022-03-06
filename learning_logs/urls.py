@@ -8,8 +8,8 @@ app_name = 'learning_logs'
 urlpatterns = [
     # Home page
     path('', views.index, name='index'),
-    #duplicate home page
-    path('2', views.index, name = 'index'),
-    #topics page
-    path('topics/', views.topics, name = 'topics')
+    # topics page
+    path('topics/', views.topics, name='topics'),
+    # page for individual topics
+    path('topics/<int:topic_id>/', views.topic, name='topic')
 ]
