@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<p>All Topics</p>
+<h1>All Topics</h1>
 
 <ul>
     {% for topic in topics %}
-        <li>{{ topic }}</li>
+    <li><a href="{% url 'learning_logs:topic' topic.id %}"> {{ topic }}</a></li>
     {% empty %}
     <li>No topics added yet</li>
     {% endfor %}
